@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Trivia de Tragos</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+      <link rel="stylesheet" href="estilos.css">
+      <link rel="stylesheet" href="https://use.typekit.net/jdw0eou.css">
+   </head>
+   <body>
+      <section>
+         <audio controls autoplay>
+            <source src="sonidos/musica-juego.mp3" type="audio/mp3">
+         </audio>
+      </section>
+      <!-- Login -->
+      <div class="container">
+         <section class="trago">
+            <img src="img/trago.png" alt="trago">
+         </section>
+         <div class="row">
+            <div class="col">
+               <section class="intro">
+                  <div class="inicio">
+                     <div>
+                        <h1> Trivia de Tragos</h1>
+                     </div>
+                     <div class="edad">
+                        <h2>¿Sos mayor de edad (+18)?</h2>
+                        <button id="mayorEdad">SI</button>
+                        <button id="menorEdad">NO</button>
+                     </div>
+                  </div>
+                  <div class="sinAcceso ocultar">
+                     <h2>No tenes edad para ingresar a esta página.</h2>
+                  </div>
+                  <div class="name ocultar">
+                     <div>
+                        <h2>Ingresá tu nombre</h2>
+                        <input id="nombreInput" type="text" placeholder="Tu nombre" />
+                        <button id="login" class="flat">Comenzar</button>
+                     </div>
+                     <div class="faltaNombre ocultar">
+                        <p>Falta ingresar el nombre!</p>
+                     </div>
+                  </div>
+               </section>
+               <!-- Instroducción -->
+               <section class="introduccion ocultar">
+                  <div>
+                     <h1>Bienvenidx <span id="nombre"></span> </h1>
+                     <p><span>¿Te pasa que tus amigos piden tragos de autor y vos no, porque no tenes idea al respecto de como estan hechos?</span></p>
+                     <p>Contestá esta trivia y volvete un experto en cocteleria! Cuidado que tenes una cantidad limitada de intentos, pero no te preocupes que te damos 3 pistas <br>a lo largo de toda la jugada!</p>
+                  </div>
+                  <div>
+                     <button id="comenzar">Comenzar</button>
+                  </div>
+               </section>
+               <!-- Juego -->
+               <section class="game ocultar">
+                  <button id="pedirPista">Pista</button>
+                  <div class="cartelIncorrecto ocultar">
+                     <p>Incorrecto! Probá de nuevo.</p>
+                  </div>
+                  <div class="cartelPista ocultar">
+                     <p class="textoPista"></p>
+                  </div>
+                  <div class="indicadores">
+                     <div class="indicador-intentos">Intentos: <span id="intentos"></span></div>
+                     <div class="indicador-pistas">Pistas: <span id="pistas"></span></div>
+                  </div>
+                  <div class="pregunta1 ocultar">
+                     <div>
+                        <h3>Trago NEGRONI</h3>
+                        <p>Selecciona el ingrediente que no posee este trago</p>
+                     </div>
+                     <div>
+                        <button class="incorrecto" >Campari</button>
+                        <button class="incorrecto" >Ginegra</button>
+                        <button class="incorrecto" >Vermut rojo</button>
+                        <button class="correcto" >Jengibre</button>
+                     </div>
+                     <div>
+                        <img src="img/madmen_gif.gif" alt="Trago Negroni">
+                     </div>
+                  </div>
+                  <div class="pregunta2 ocultar">
+                     <div>
+                        <h3>Trago DRY MARTINI</h3>
+                        <p>Selecciona el ingrediente principal que tiene este trago</p>
+                     </div>
+                     <div>
+                        <button class="incorrecto">Vermuth blanco seco</button>
+                        <button class="correcto">Ginebra</button>
+                        <button class="incorrecto">Aceitunas</button>
+                        <button class="incorrecto">Piel de limón</button>
+                     </div>
+                     <div>
+                        <img src="img/martini_gif.gif" alt="Trago Martini">
+                     </div>
+                  </div>
+                  <div class="pregunta3 ocultar">
+                     <div>
+                        <h3>Trago DRY MARTINI: BONUS TRACK</h3>
+                        <p>Este trago es conocido por James Bond ¿Cual es su frase tipica?</p>
+                     </div>
+                     <div>
+                        <button class="correcto">Shaken... Not stirred</button>
+                        <button class="incorrecto">Stirred... Not shaken</button>
+                        <button class="incorrecto">Neat... on the rocks</button>
+                        <button class="incorrecto">Cold... as your heart</button>
+                     </div>
+                     <div>
+                        <img src="img/stirred_gif.gif" alt="Stirred">
+                     </div>
+                  </div>
+                  <div class="pregunta4 ocultar">
+                     <div>
+                        <h3>Trago PISCO SOUR</h3>
+                        <p>¿Cuál es el país de origen de este trago?</p>
+                     </div>
+                     <div>
+                        <button class="incorrecto">Venezuela</button>
+                        <button class="incorrecto">Ecuador</button>
+                        <button class="correcto">Peru</button>
+                        <button class="incorrecto">Chile</button>
+                     </div>
+                     <div>
+                        <img src="img/marilyn_gif.gif" alt="Trago Pisco">
+                     </div>
+                  </div>
+                  <div class="pregunta5 ocultar">
+                     <div>
+                        <h3>Trago GIN TONIC</h3>
+                        <p>Selecciona el ingrediente principal de este trago</p>
+                     </div>
+                     <div>
+                        <button class="incorrecto">Ginebra</button>
+                        <button class="correcto">Tónica</button>
+                        <button class="incorrecto">Rodaja de lima o limón</button>
+                        <button class="incorrecto">Bayas de enebro</button>
+                     </div>
+                     <div>
+                        <img src="img/gintonic_gif.gif" alt="Trago Gin Tonic">
+                     </div>
+                  </div>
+                  <div class="pregunta6 ocultar">
+                     <div>
+                        <h3>Trago COSMOPOLITAN</h3>
+                        <p>Selecciona el ingrediente que no posee este trago</p>
+                     </div>
+                     <div>
+                        <button class="correcto">Jugo de arándanos</button>
+                        <button class="correcto">Lima</button>
+                        <button class="incorrecto">Sprite</button>
+                        <button class="correcto">Vodka</button>
+                     </div>
+                     <div>
+                        <img src="img/cosmopolitan_gif.gif" alt="Trago Cosmopolitan">
+                     </div>
+                  </div>
+                  <div class="pregunta7 ocultar">
+                     <div>
+                        <h3>Trago MARGARITA</h3>
+                        <p>¿Cuál es el país de origen de este trago?</p>
+                     </div>
+                     <div>
+                        <button class="incorrecto">Holanda</button>
+                        <button class="incorrecto">Rusia</button>
+                        <button class="correcto">Méjico</button>
+                        <button class="incorrecto">Argentina</button>
+                     </div>
+                     <div>
+                        <img src="img/margarita_gif.gif" alt="Trago Margarita">
+                     </div>
+                  </div>
+                  <div class="pregunta8 ocultar">
+                     <div>
+                        <h3>Trago COSMOPOLITAN: BONUS TRACK</h3>
+                        <p>Este trago es conocido por una película ¿Cuál es?</p>
+                     </div>
+                     <div>
+                        <button class="incorrecto" >Amores y enredos de una boda</button>
+                        <button class="correcto" >Sex and the city</button>
+                        <button class="incorrecto" >Shrek</button>
+                        <button class="incorrecto" >PD: Te Amo</button>
+                     </div>
+                     <div>
+                        <img src="img/cosmo.gif" alt="Sexandcity">
+                     </div>
+                  </div>
+                  <div class="pregunta9 ocultar">
+                     <div>
+                        <h3>Trago MANHATTAN</h3>
+                        <p>Selecciona el ingrediente que no posee este trago</p>
+                     </div>
+                     <div>
+                        <button class="correcto">Jugo de naranja</button>
+                        <button class="incorrecto">Whisky</button>
+                        <button class="incorrecto">Martini Rojo</button>
+                        <button class="incorrecto">Cereza confitada</button>
+                     </div>
+                     <div>
+                        <img src="img/bridget.gif" alt="Trago Manhattan">
+                     </div>
+                  </div>
+                  <div class="pregunta10 ocultar">
+                     <div>
+                        <h3>Trago OLD FASHIONED</h3>
+                        <p>Selecciona el ingrediente principal de este trago</p>
+                     </div>
+                     <div>
+                        <button class="incorrecto">Angostura</button>
+                        <button class="incorrecto">Agua helada</button>
+                        <button class="incorrecto">Cereza maraschino</button>
+                        <button class="correcto">Bourbon</button>
+                     </div>
+                     <div>
+                        <img src="img/old_fashioned_gif.gif" alt="Trago Old Fashioned">
+                     </div>
+                  </div>
+                  <div class="pregunta11 ocultar">
+                     <div>
+                        <h3>Trago OLD FASHIONED: BONUS TRACK</h3>
+                        <p>Este trago es conocido por una serie en particular ¿Cuál es?</p>
+                     </div>
+                     <div>
+                        <button class="correcto">Mad Men</button>
+                        <button class="incorrecto">Suits</button>
+                        <button class="incorrecto">Succesion</button>
+                        <button class="incorrecto">Outlander</button>
+                     </div>
+                     <div>
+                        <img src="img/madmen.gif" alt="madmen">
+                     </div>
+                  </div>
+                  <div class="pregunta12 ocultar">
+                     <div>
+                        <h3>Trago MOJITO</h3>
+                        <p>¿Cuál es el país de origen de este trago?</p>
+                     </div>
+                     <div>
+                        <button class="incorrecto">Brasil</button>
+                        <button class="incorrecto">Chile</button>
+                        <button class="incorrecto">China</button>
+                        <button class="correcto">Cuba</button>
+                     </div>
+                     <div>
+                        <img src="img/samatha_gif.gif" alt="Trago Mojito">
+                     </div>
+                  </div>
+                  <div class="pregunta13 ocultar">
+                     <div>
+                        <h3>Trago DAIQUIRI</h3>
+                        <p>Selecciona el ingrediente que no posee este trago</p>
+                     </div>
+                     <div>
+                        <button class="incorrecto">Ron blanco</button>
+                        <button class="incorrecto">Jugo de lima</button>
+                        <button class="incorrecto">Sirope de azúcar</button>
+                        <button class="correcto">Whisky</button>
+                     </div>
+                     <div>
+                        <img src="img/daiquiri_gif.gif" alt="Trago Daiquiri">
+                     </div>
+                  </div>
+                  <div class="pregunta14 ocultar">
+                     <div>
+                        <h1>¡Ganaste!</h1>
+                        <img src="img/gano.gif" alt="ganaste">
+                     </div>
+                  </div>
+               </section>
+               <section class="perder ocultar">
+                  <div>
+                     <h1> Perdiste :(</h1>
+                     <img src="img/perdiste.gif" alt="perdiste">
+                  </div>
+                  <div><button class="restart">Jugar De Nuevo</button>
+                  </div>
+               </section>
+            </div>
+         </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="./trivia.js"></script>
+   </body>
+</html>

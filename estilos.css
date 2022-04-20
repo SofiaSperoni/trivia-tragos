@@ -1,0 +1,173 @@
+.ocultar{
+  display: none !important;
+}
+body {
+  background-image: url(img/background.jpg);
+  align-items: center;
+  font-family: itc-avant-garde-gothic-pro,sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color: #252525;
+}
+h1 {
+  font-family: industry-inc-inline,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3em;
+  text-align: center;
+  margin-top: 50px;
+}
+h2 {
+  font-family: itc-avant-garde-gothic-pro,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #f2694d;
+  text-align: center;
+}
+.container {
+  background-color: rgb(255, 255, 255, 0.7);
+  border-radius: 20px;
+  box-shadow: -2px 7px 11px -2px rgba(0,0,0,0.65);
+  -webkit-box-shadow: -2px 7px 11px -2px rgba(0,0,0,0.65);
+  -moz-box-shadow: -2px 7px 11px -2px rgba(0,0,0,0.65);
+  margin-top: 150px;
+  height: 650px;
+  width: 60%;
+}
+.trago {
+  position: absolute;
+  right: 0;
+  bottom:0;
+  margin-bottom: 100px;
+  margin-right: 350px;
+}
+.intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+.inicio {
+  width: 1000px;
+}
+.edad {
+  text-align: center;
+  margin-top: 50px;
+}
+button {
+  background-color: #114459;
+  color: beige;
+  border-radius: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 5px;
+  font-weight: 700;
+}
+.name {
+  margin-top: 50px;
+}
+.faltaNombre p {
+  margin-top: 1rem;
+  color: red;
+  text-align: center;
+}
+.introduccion {
+  margin-left: 130px;
+  margin-right: 130px;
+  margin-top: 100px;
+  text-align: center;
+}
+.introduccion h1 {
+  margin-bottom: 50px;
+}
+.introduccion p {
+  font-size: 1.2rem;
+}
+.introduccion span {
+  font-weight: bold;
+}
+#comenzar{
+  margin-top: 20px;
+}
+.game{
+  text-align: center;
+}
+.game #pedirPista {
+  position: absolute;
+  right: 0;
+  margin-top: 80px;
+  margin-right: 90px;
+  background-color: #ffcc80;
+  color: beige;
+  border-radius: 100%;
+  padding: 15px 10px;
+  box-shadow: -2px 7px 11px -2px rgba(0,0,0,0.65);
+  -webkit-box-shadow: -2px 7px 11px -2px rgba(0,0,0,0.65);
+  -moz-box-shadow: -2px 7px 11px -2px rgba(0,0,0,0.65);
+  color: #114459;
+}
+.indicadores {
+  display: inline-flex;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+.indicador-intentos {
+  position: absolute;
+  left: 0;
+  margin-left: 100px;
+  font-weight: bold;
+}
+.indicador-pistas {
+  position: absolute;
+  right: 0;
+  margin-right: 100px;
+  font-weight: bold;
+}
+h3{
+  color: #f2694d;
+  font-weight: 700;
+}
+.game img {
+  margin: 50px;
+  max-height: 300px;
+}
+.game p {
+  font-size: 1.2rem;
+  margin-bottom: 50px;
+}
+.perder {
+  text-align: center;
+}
+.perder img {
+  margin: 50px;
+  max-height: 300px;
+}
+.perder button{
+  bottom: 0;
+}
+.cartelIncorrecto p{
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 0px;
+  margin-left: 420px;
+  margin-top: 5px;
+  padding: 5px 10px;
+  color: white;
+  background-color:#f2694d 
+}
+.cartelPista p{
+  position: absolute;
+  right: 0;
+  margin-bottom: 0px;
+  margin-top: 10px;
+  margin-right: 100px;
+  padding: 5px 10px;
+  color: white;
+  background-color:#f2694d;
+  border-radius: 15% 
+}
+audio {
+  position: absolute;
+  bottom:0;
+}
